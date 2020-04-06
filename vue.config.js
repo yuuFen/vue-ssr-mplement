@@ -12,6 +12,7 @@ module.exports = {
   css: {
     extract: false,
   },
+  outputDir: './dist/' + target,
   configureWebpack: () => ({
     entry: `./src/entry-${target}.js`,
     // 对 bundle renderer 提供 source map 支持
