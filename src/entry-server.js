@@ -1,4 +1,4 @@
-import {} from './app'
+import { createApp } from './app'
 
 export default (context) => {
   // 返回 Promise，确保路由或组件准备就绪
@@ -8,12 +8,8 @@ export default (context) => {
     // 跳转首屏地址
     router.push(context.url)
     // 完成 promise
-    router.onReady(
-      () => {
-        resolve(app)
-      },
-      // error handler
-      reject
-    )
+    router.onReady(() => {
+      resolve(app)
+    }, reject)
   })
 }
