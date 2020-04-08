@@ -37,7 +37,7 @@ module.exports = {
         })
       : undefined,
     optimization: {
-      splitchunks: undefined,
+      splitChunks: undefined,
     },
     // 这个插件可以将服务器的整个输出，构建为单个 json 文件
     // 服务端默认文件名为 vue-ssr-server-bundle.json
